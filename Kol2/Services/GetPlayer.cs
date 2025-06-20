@@ -25,7 +25,7 @@ public class GetPlayer : IGetPlayer
                 BirthDate = p.BirthDate,
                 Matches = p.PlayerMatches.Select(pm => new Matches
                 {
-                    TournamentName = pm.Tournaments.Select(t => t.Name).FirstOrDefault(),
+                    TournamentName = Matches.Tournament.Select(t => t.Name).FirstOrDefault(),
                     MapName = pm.Maps.Select(m => m.Name).FirstOrDefault(),
                     Date = pm.DateTime,
                     Mvps = pm.Players.Select(m => m.Mvps),

@@ -31,15 +31,15 @@ public class PlayerService : IPlayerService
 
             var playerMatch = new PlayerMatch
             {
-                MatchId = Matches.MatchId,
-                Mvps = matchDto.MVPs,
-                Rating = matchDto.Rating,
+                MatchId = Match.MatchId,
+                Mvps = Matches.Mvps,
+                Rating = Matches.Rating,
                 Player = player
             };
             
-            if (matchDto.Rating > match.BestRating)
+            if (Matches.Rating > match.BestRating)
             {
-                match.BestRating = matchDto.Rating;
+                match.BestRating = Matches.Rating;
                 _context.Matches.Update(match);
             }
 

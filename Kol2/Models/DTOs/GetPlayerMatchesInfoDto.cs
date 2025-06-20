@@ -16,7 +16,7 @@ public class Matches
     public string TournamentName { get; set; }
     public string MapName { get; set; }
     public DateTime Date { get; set; }
-    public IEnumerable<int> Mvps { get; set; }
+    public static int Mvps { get; set; }
     public IEnumerable<double> Rating { get; set; }
     public int Team1Score { get; set; }
     public int Team2Score { get; set; }

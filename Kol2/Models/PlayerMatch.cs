@@ -16,6 +16,6 @@ public class PlayerMatch
     public int MatchId { get; set; }
     [ForeignKey(nameof(PlayerId))]
     public int PlayerId { get; set; }
-    
-    
+
+    public Player Player { get; set; }
 }
